@@ -27,5 +27,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
           body_path: notes-${{ env.RELEASE_VERSION }}.md
