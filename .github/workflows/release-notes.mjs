@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { readFileSync, writeFileSync } from "fs";
 const tag = process.argv[2].replace("v", "");
 const log = readFileSync("./CHANGELOG.md", { encoding: "utf-8" }).split("\n");
