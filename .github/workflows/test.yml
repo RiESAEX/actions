@@ -19,9 +19,9 @@ jobs:
           echo "RELEASE_VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
           echo "version is: ${{ env.RELEASE_VERSION }}"
       - name: Generate Release Notes
-      run: |
-        ./.github/workflows/release-notes.js ${{ env.RELEASE_VERSION }} notes-${{ env.RELEASE_VERSION }}.md
-        cat notes-${{ env.RELEASE_VERSION }}.md
+        run: |
+          ./.github/workflows/release-notes.js ${{ env.RELEASE_VERSION }} notes-${{ env.RELEASE_VERSION }}.md
+          cat notes-${{ env.RELEASE_VERSION }}.md
       - name: Create Release for Tag
         id: release_tag
         uses: yyx990803/release-tag@master
